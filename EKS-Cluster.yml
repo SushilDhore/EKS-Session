@@ -1,0 +1,16 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: Sushil-EKS-Cluster
+  region: ap-south-1
+
+nodeGroups:
+  - name: Node-Group-1-Low-Traffic
+    instanceType: t2.micro
+    desiredCapacity: 2
+
+
+  - name: Node-Group-1-High-Traffic
+    instanceType: t2.small
+    desiredCapacity: 2
